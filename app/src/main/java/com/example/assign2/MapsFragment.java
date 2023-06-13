@@ -86,11 +86,12 @@ public class MapsFragment extends Fragment {
                 //                          the function in the other onFragmentResult
                 if(myMap != null) {
                     myMap.clear();
-                }
-                Log.d("acclLATLONG", marker.toString());
-                if(marker != null) {
-                    myMap.addMarker(new MarkerOptions().position(marker).title("Current Location"));
-                    myMap.moveCamera(CameraUpdateFactory.newLatLng(marker));
+
+                    Log.d("acclLATLONG", marker.toString());
+                    if(marker != null) {
+                        myMap.addMarker(new MarkerOptions().position(marker).title("Current Location"));
+                        myMap.moveCamera(CameraUpdateFactory.newLatLng(marker));
+                    }
                 }
             }
         });
